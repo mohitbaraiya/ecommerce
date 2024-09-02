@@ -57,22 +57,41 @@ export default function Header() {
       </div>
       <div className="bg-black">
         <div className="container">
-          <ul className="flex space-x-4">
-            {MENU_ITEMS.map((menu) => (
-              <li key={menu.name}>
+          <div className="flex items-center justify-between">
+            <ul className="flex space-x-4">
+              {MENU_ITEMS.map((menu) => (
+                <li key={menu.name}>
+                  <Link
+                    to={"/"}
+                    className={classNames(
+                      "py-5 text-sm font-medium",
+                      menu.active ? "text-primary" : "text-white"
+                    )}
+                  >
+                    {menu.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="flex space-x-4">
+              <li>
                 <Link
-                  to={"/"}
-                  className={classNames(
-                    "py-5 text-sm font-medium",
-                    menu.active ? "text-primary" : "text-white"
-                  )}
+                  className="leading-[50px] relative before:block before:bg-[url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAXCAYAAACBMvbiAAABDUlEQVR42mIQ2pL3f7Dgoe2YUccUXlrxHwQSz85DEQcBo32NA+OY+1/f/FfaWTHwjjnw+gYYT7izG6tjGq9v+g8DFz48Ajt6w7PzcPWOh7tRQhcoDpIn2zFgi9//+goyGMUxgSemgkMNQBq9pQAAglAQ3f+u4wADlz5LCPOFowYWhMbAaq42OH4DPMO0AY0Xhu8W+bZDaDXyALGr/YLZqQZm471yg2DT7Db2D9P990yEFjd5/85ztuDhUfTooopjYIbiSsDIDgOlG1jCReePlsDUdcyoY3ABHBqmMdAFEHbMRiBmHgyOuQTE/CDxgXbMEyCWBokNtGO+AbEBiD/QjvkDxH4Q3sA7JofedgIAhc+BFWAZYZ0AAAAASUVORK5CYII=)] before:absolute before:right-3 before:-top-7  before:w-10 before:h-[23px] text-white"
+                  to={"/new-arrivals"}
                 >
-                  {menu.name}
+                  NEW ARRIVALS
                 </Link>
               </li>
-            ))}
-          </ul>
-          <ul className="flex space-x-4"></ul>
+              <li>
+                <Link
+                  className="leading-[50px] relative before:block before:bg-[url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAXCAYAAACBMvbiAAAA9UlEQVR42mL47+T0f7DgYeCYUcdER///f/PmfyiAsP39cavv6/v//+xZGjnmwAEQRvBnzQLRA+iYzZsBrJOBBUAxDERH7BodoAtk2QzQBfI9HIfwkR7k08i93k//E1OPYLoezkYwe1dlYmDDLCWZorUchkqP5qhnAGPG3FI7w3C+XUA5TKtzHr6mTAwB0a8BrofpzQcwillR31sVAYzOqD0M1Zc5YgjD7V0CwFTCEEiH6Rb4G1B8tASmumNGHYML4NAwjYEugLBjNgIx82BwzCUg5geJD7RjngCxNEhsoB3zDYgNQPyBdswfIPaD8AbeMTn0thMA35YZi12hSVcAAAAASUVORK5CYII=)] before:absolute before:right-3 before:-top-7  before:w-10 before:h-[23px] text-white"
+                  to={"/new-arrivals"}
+                >
+                  HOT SALE
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
