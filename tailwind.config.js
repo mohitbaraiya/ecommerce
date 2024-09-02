@@ -9,10 +9,11 @@ module.exports = {
       },
     },
     colors: {
-      primary: "#0103ba",
+      primary: "#00A86B",
+      secondary: "#94857B",
       gray: "#888888",
       white: "#ffffff",
-      black: "#000000",
+      black: "#222222",
     },
   },
   plugins: [],
