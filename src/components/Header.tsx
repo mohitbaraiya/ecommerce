@@ -1,6 +1,8 @@
 import React from "react";
 import SearchIcon from "./Icons/SearchIcon";
 import { Link } from "react-router-dom";
+import UserIcon from "./Icons/UserIcon";
+import ShoppingBagIcon from "./Icons/ShoppingBagIcon";
 
 export default function Header() {
   return (
@@ -12,7 +14,7 @@ export default function Header() {
             <img src="/logo-64.png" className="w-9" alt="logo" />
             <span className="text-3xl font-bold text-primary">SHOPSY</span>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex items-center space-x-4">
             <div className="relative">
               <input
                 type="text"
@@ -24,9 +26,19 @@ export default function Header() {
                 <SearchIcon />
               </button>
             </div>
-            <ul>
+            <ul className="flex items-center space-x-4">
               <li>
-                <Link to="/account">hey</Link>
+                <Link to="/account">
+                  <UserIcon className="size-6" />{" "}
+                </Link>
+              </li>
+              <li className="relative">
+                <Link to="/checkout">
+                  <ShoppingBagIcon className="size-6" />{" "}
+                  <span className="absolute inline-block text-xs leading-4 text-center text-white align-middle rounded-full bottom-3 left-4 size-4 bg-primary">
+                    9
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
