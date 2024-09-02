@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import UserIcon from "./Icons/UserIcon";
 import ShoppingBagIcon from "./Icons/ShoppingBagIcon";
 import classNames from "classnames";
+import CheveronDown from "./Icons/CheveronDown";
 
 const MENU_ITEMS = [
   { name: "HOME", link: "/", active: true },
@@ -60,7 +61,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <ul className="flex space-x-4">
               {MENU_ITEMS.map((menu) => (
-                <li key={menu.name}>
+                <li key={menu.name} className="flex items-center space-x-2">
                   <Link
                     to={"/"}
                     className={classNames(
@@ -70,6 +71,9 @@ export default function Header() {
                   >
                     {menu.name}
                   </Link>
+                  <button>
+                    <CheveronDown className="text-white size-3" />
+                  </button>
                 </li>
               ))}
             </ul>
