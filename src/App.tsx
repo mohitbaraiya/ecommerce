@@ -1,5 +1,13 @@
-import Header from "./components/Header";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout";
 
 export default function App() {
-  return <Header />;
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      Component: Layout,
+      errorElement: <div>error occur</div>,
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }

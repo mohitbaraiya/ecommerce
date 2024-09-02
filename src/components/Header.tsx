@@ -1,5 +1,6 @@
 import React from "react";
 import SearchIcon from "./Icons/SearchIcon";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -11,7 +12,7 @@ export default function Header() {
             <img src="/logo-64.png" className="w-9" alt="logo" />
             <span className="text-3xl font-bold text-primary">SHOPSY</span>
           </div>
-          <div>
+          <div className="flex space-x-4">
             <div className="relative">
               <input
                 type="text"
@@ -23,6 +24,11 @@ export default function Header() {
                 <SearchIcon />
               </button>
             </div>
+            <ul>
+              <li>
+                <Link to="/account">hey</Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
